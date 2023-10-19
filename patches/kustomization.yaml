@@ -1,0 +1,9 @@
+resources:
+- deployment.yaml
+- deployment1.yaml
+patches:
+  - path: add-label.patch.yaml
+  - path: fix-version.patch.yaml
+    target:
+      labelSelector: "app.kubernetes.io/name=nginx"
+
